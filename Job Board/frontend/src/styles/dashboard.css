@@ -1,0 +1,22 @@
+/* src/styles/dashboard.css */
+.dashboard {
+    padding: 40px;
+  }
+  
+  .dashboard h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .dashboard .job-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .dashboard .job-list .job-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  

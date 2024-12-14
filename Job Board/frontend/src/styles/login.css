@@ -1,0 +1,38 @@
+/* src/styles/login.css */
+.login-page {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+  }
+  
+  .login-page h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .login-page input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .login-page button {
+    width: 100%;
+    padding: 12px;
+    background-color: #008cba;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .login-page button:hover {
+    background-color: #007b9f;
+  }
+  

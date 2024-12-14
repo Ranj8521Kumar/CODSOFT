@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="#">
+    <title>Ranjan's Calculator</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #2c2c2c;
+            font-family: Arial, sans-serif;
+        }
+
+        #calculator {
+            border: 1px solid rgb(188, 182, 182);
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+            background-color: rgb(92, 87, 87);
+            padding: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        #display {
+            width: 100%;
+            height: 80px;
+            font-size: 2rem;
+            background-color: blue;
+            border: 2px solid black;
+            color: white;
+            text-align: right;
+            padding: 10px;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            gap: 10px;
+        }
+
+        .button {
+            flex: 1 1 calc(25% - 10px);
+            height: 60px;
+            background-color: aqua;
+            border: 1px solid black;
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .button:hover {
+            background-color: #00ced1;
+            transform: scale(1.05);
+        }
+
+        .button:active {
+            transform: scale(0.95);
+        }
+
+        @media (max-width: 768px) {
+            #display {
+                height: 60px;
+                font-size: 1.5rem;
+            }
+
+            .button {
+                height: 50px;
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #calculator {
+                width: 95%;
+                padding: 10px;
+            }
+
+            .button {
+                height: 45px;
+                font-size: 1rem;
+            }
+
+            #display {
+                height: 50px;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="calculator">
+        <input type="text" id="display" placeholder="0" readonly />
+
+        <div class="button-container">
+            <button class="button" onclick="correntDisplay=''; document.querySelector('#display').value=correntDisplay;">C</button>
+            <button class="button" onclick="correntDisplay=correntDisplay+1; document.querySelector('#display').value=correntDisplay;">1</button>
+            <button class="button" onclick="correntDisplay=correntDisplay+2; document.querySelector('#display').value=correntDisplay;">2</button>
+            <button class="button" onclick="correntDisplay=correntDisplay+'+'; document.querySelector('#display').value=correntDisplay;">+</button>
+            <button class="button" onclick="correntDisplay=correntDisplay+3; document.querySelector('#display').value=correntDisplay;">3</button>
+            <button class="button" onclick="correntDisplay=correntDisplay+4; document.querySelector('#display').value=correntDisplay;">4</button>
+            <button class="button" onclick="correntDisplay=correntDisplay+'-'; document.querySelector('#display').value=correntDisplay;">-</button>
+            <button class="button" onclick="correntDisplay=correntDisplay+5; document.querySelector('#display').value=correntDisplay;">5</button>
+            <button class="button" onclick="correntDisplay=correntDisplay+6; document.querySelector('#display').value=correntDisplay;">6</button>
+            <button class="button" onclick="correntDisplay=correntDisplay+'*'; document.querySelector('#display').value=correntDisplay;">*</button>
+            <button class="button" onclick="correntDisplay=correntDisplay+7; document.querySelector('#display').value=correntDisplay;">7</button>
+            <button class="button" onclick="correntDisplay=correntDisplay+8; document.querySelector('#display').value=correntDisplay;">8</button>
+            <button class="button" onclick="correntDisplay=correntDisplay+'/'; document.querySelector('#display').value=correntDisplay;">/</button>
+            <button class="button" onclick="correntDisplay=eval(correntDisplay); document.querySelector('#display').value=correntDisplay;">=</button>
+            <button class="button" onclick="correntDisplay=correntDisplay+9; document.querySelector('#display').value=correntDisplay;">9</button>
+            <button class="button" onclick="correntDisplay=correntDisplay+0; document.querySelector('#display').value=correntDisplay;">0</button>
+            <button class="button" onclick="correntDisplay=correntDisplay+'.'; document.querySelector('#display').value=correntDisplay;">.</button>
+        </div>
+    </div>
+    <script>
+        let correntDisplay = '';
+        document.querySelector('#display').value = correntDisplay;
+    </script>
+</body>
+</html>
